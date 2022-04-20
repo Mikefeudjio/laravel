@@ -13,7 +13,23 @@ use App\Http\Controllers\PostControlLer;
 |
 */
 
-Route::get('/' , [ PostControlLer::class , 'index']);
+Route::get('/' , function()
+{
+    return view('welcome');
+}); 
+
+route::get('post', function()
+{
+    return response()->json([
+        'title' => 'mon super titre ',
+        'description'=> 'ma super description'
+    ]);
+});
+
+Route::get('article', function()
+{
+    return view('Article');
+});
 
 /*
 Route::get('post' , function()
