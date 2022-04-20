@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PostControlLer;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/' , [ PostControlLer::class , 'index']);
+
+/*
+Route::get('post' , function()
+{
+    return response()->json([
+        'title'=> 'mon super titre',
+        'description'=> 'ma super description'
+    ]);
 });
+
+route::get('article' , function(){
+    return  view('Articles');
+});
+
+*/
