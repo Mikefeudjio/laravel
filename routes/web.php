@@ -13,35 +13,19 @@ use App\Http\Controllers\PostControlLer;
 |
 */
 
-Route::get('/' , function()
-{
-    return view('welcome');
-}); 
+Route::get('/' , [PostControlLer::class , 'index']) ->name('welcome');
+Route::get('posts/{id}' , [PostControlLer::class , 'Show']);
+Route::get('contact' , [PostControlLer::class , 'contact']) ->name('contact');
 
-route::get('post', function()
-{
-    return response()->json([
-        'title' => 'mon super titre ',
-        'description'=> 'ma super description'
-    ]);
-});
 
-Route::get('article', function()
-{
-    return view('Article');
-});
+
+// les functions json
 
 /*
-Route::get('post' , function()
-{
+route::get('post' , function(){
     return response()->json([
         'title'=> 'mon super titre',
-        'description'=> 'ma super description'
+        'description' => 'ma super description'
     ]);
 });
-
-route::get('article' , function(){
-    return  view('Articles');
-});
-
-*/
+  */
