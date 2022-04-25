@@ -36,7 +36,7 @@ class PostController extends Controller
     }
 
 
-    public function cree(){
+    public function create(){
         return view('form');
     }
 }
