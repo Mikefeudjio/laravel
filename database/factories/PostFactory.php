@@ -19,7 +19,7 @@ class PostFactory extends Factory
         return [
             'title'=> $this->faker->sentence,
             'content'=> $this->faker->paragraph,
-            'created_at'= now()
+            'created_at'=> now()
         ];
     }
 }
