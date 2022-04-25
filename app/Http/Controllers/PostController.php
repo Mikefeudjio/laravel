@@ -34,7 +34,9 @@ class PostController extends Controller
     public function contact(){
         return view('contact');
     }
-    public function create(){
+
+
+    public function cree(){
         return view('form');
     }
 }
