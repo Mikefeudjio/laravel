@@ -4,10 +4,17 @@
 <h1>create a new poste</h1>
 
 <form action="{{route('posts.create')}}" method="POST">
-<input type="text" name="title" class="border-gray-600 border-2">
-<textarea name="content" id="" cols="30" rows="10" class="border-gray-600 border-2" ></textarea>
 
-<button type="submit" class="bg-green-500">cree </button>
+    @csrf
+
+    <fieldset>
+        <legend>forulair de commandes</legend>
+        <p><label for="nam"></label> <input type="text" name="nom" placeholder="mon" required autofocus></p>
+       
+    
+        <textarea name="text" id="" cols="30" rows="5">text</textarea>
+        <p><input type="submit" name="button" value="envoyer"></p>
+       
 </form>
     
 @endsection

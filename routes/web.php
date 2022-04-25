@@ -15,6 +15,7 @@ use App\Http\Controllers\PostControlLer;
 
 Route::get('/' , [PostControlLer::class , 'index']) ->name('welcome');
 Route::get('posts/create' , [PostControlLer::class , 'create'])->name('posts.create');
+Route::post('posts/create' , [PostControlLer::class , 'stor'])->name('posts.stor');
 Route::get('posts/{id}' , [PostControlLer::class , 'Show'])->name('posts.show');
 Route::get('contact' , [PostControlLer::class , 'contact']) ->name('contact');
 

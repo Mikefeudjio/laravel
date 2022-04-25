@@ -39,4 +39,8 @@ class PostController extends Controller
     public function create(){
         return view('form');
     }
+    public function stor(Request $request)
+    {
+        dd($request);
+    }
 }
