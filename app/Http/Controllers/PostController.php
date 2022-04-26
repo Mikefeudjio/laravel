@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
+
       
         $posts = post::all();
         ($posts);
@@ -41,6 +42,17 @@ class PostController extends Controller
     }
     public function stor(Request $request)
     {
-        dd($request);
+       // $posts =new posts();
+
+
+    //     $posts->title = $request->title;
+    //     $posts->content = $request->content;
+    //     $posts->save();
+     dd('post create');
+
+    post::create([
+        'title' -> $request->title,
+        'content' -> $request->content
+    ]);
     }
 }
