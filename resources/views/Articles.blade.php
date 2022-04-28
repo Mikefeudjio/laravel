@@ -4,13 +4,11 @@
 <h1>les nouveau articles</h1>
 <h3>{{ $post ->content}}</h3>
 <hr>
-@foreach
-
+@forelse 
 ( $post -> comments as $comment )
 <div>{{$comment->content}}</div>
     @empty
     <div> auncun commentaire trouve</div>
-
-@endforeach
+@endforelse
 
 @endsection
