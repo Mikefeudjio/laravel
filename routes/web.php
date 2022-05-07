@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\PostControlLer;
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,16 @@ use App\Http\Controllers\PostControlLer;
 |
 */
 
-Route::get('/' , [PostControlLer::class , 'index']) ->name('welcome');
-Route::get('posts/create' , [PostControlLer::class , 'create'])->name('posts.create');
-Route::post('posts/create' , [PostControlLer::class , 'stor'])->name('posts.stor');
-Route::get('posts/{id}' , [PostControlLer::class , 'Show'])->name('posts.show');
-Route::get('contact' , [PostControlLer::class , 'contact']) ->name('contact');
+// Route::get('/' , [PostControlLer::class , 'index']) ->name('welcome');
+// Route::get('posts/create' , [PostControlLer::class , 'create'])->name('posts.create');
+// Route::post('posts/create' , [PostControlLer::class , 'stor'])->name('posts.stor');
+// Route::get('posts/{id}' , [PostControlLer::class , 'Show'])->name('posts.show');
+// Route::get('contact' , [PostControlLer::class , 'contact']) ->name('contact');
 
 
+Route::middleware(['auth', ])->group(function () {
+    Route::resource('livre', BookController::class);
+});
 
 // les functions json
 
