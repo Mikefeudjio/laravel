@@ -1,58 +1,97 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\models\post;
+
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index(){
-
-      
-        $posts = post::all();
-        ($posts);
-
-        return view('Article', [
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $posts = [
+            'mon premier super titre ',
+            'mon second super titre'
+        ];
+        return view('article' , [
             'posts' => $posts
         ]);
     }
-    public function Show($id){
 
-        $post = post::find($id);
-       
-        // $posts = [
-        //     1 => 'mon titre numero un',
-        //     2 => 'mon titre numero deux'
-        // ];
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
 
-       // $post = $posts[$id] ?? 'pas de titre' ;
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
 
-        return view('Articles', [
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $post = [
+            1 => 'mon titre numero 1',
+            2 => 'mon titre numero 1'
+        ];
+        return view('article' , [
             'post' => $post
         ]);
-
-    }
-    public function contact(){
-        return view('contact');
+        $post = $post[];
     }
 
-
-    public function create(){
-        return view('form');
-    }
-    public function stor(Request $request)
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
     {
-       // $posts =new posts();
+        //
+    }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
 
-    //     $posts->title = $request->title;
-    //     $posts->content = $request->content;
-    //     $posts->save();
-     dd('post create');
-
-    post::create([
-        'title' -> $request->title,
-        'content' -> $request->content
-    ]);
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }
