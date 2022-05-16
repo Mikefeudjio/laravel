@@ -27,9 +27,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function contact()
     {
-        //
+        return view('contact');
     }
 
     /**
@@ -53,12 +53,13 @@ class PostController extends Controller
     {
         $post = [
             1 => 'mon titre numero 1',
-            2 => 'mon titre numero 1'
+            2 => 'mon titre numero 2'
         ];
-        return view('article' , [
+        $post = $post[$id] ?? 'pas de titre';
+        return view('Articles' , [
             'post' => $post
         ]);
-        $post = $post[];
+      
     }
 
     /**
