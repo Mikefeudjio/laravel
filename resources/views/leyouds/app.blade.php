@@ -7,6 +7,7 @@
     <title>Mon super site</title>
 </head>
 <body>
+    @include('partiese.navbar')
     @yield('contant')
 </body>
 </html>
