@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mon super site</title>
 </head>
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 <body>
     @include('partiese.navbar')
     @yield('contant')
+
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
