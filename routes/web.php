@@ -22,6 +22,8 @@ Route::get('/' , [PostController::class , 'index'] ) ->name('Accueil');
 Route::get('posts/{id}' , [PostController::class , 'show'])->name('posts.show');
 Route::get('contact' , [PostController::class , 'contact'] )->name('contact');
 
+Route::get('form' , [PostController::class , 'contact'] )->name('posts.create');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
