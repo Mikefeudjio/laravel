@@ -19,7 +19,7 @@ Route::get('view', function () {
 });
 
 Route::get('/' , [PostController::class , 'index'] ) ->name('Accueil');
-Route::get('posts/{id}' , [PostController::class , 'show'] );
+Route::get('posts/{id}' , [PostController::class , 'show'])->name('posts.show');
 Route::get('contact' , [PostController::class , 'contact'] )->name('contact');
 
 

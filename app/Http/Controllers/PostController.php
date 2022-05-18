@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -13,10 +13,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = [
-            'mon premier super titre ',
-            'mon second super titre'
-        ];
+        $posts = post::all();
+        
+        
         return view('article' , [
             'posts' => $posts
         ]);
