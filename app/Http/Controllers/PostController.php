@@ -31,15 +31,20 @@ class PostController extends Controller
         return view('contact');
     }
 
+    public function store(request $request)
+    {
+        return view('');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function create(Request $request)
     {
-        //
+        return view('form');
     }
 
     /**

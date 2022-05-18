@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 <body>
     @include('partiese.navbar')
-   <div class="container mx-auto"> @yield('contant')</div>
+   <div class="container mg-auto"> @yield('contant')</div>
 
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
